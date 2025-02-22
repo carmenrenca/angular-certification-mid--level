@@ -5,9 +5,11 @@ import { Movie } from "../model/movie.model";
   template: `
     <div class="movie-item">
       <div>
-        <h4>movie().title</h4>
+        <h4>{{ movie().title }}</h4>
         <small class="subtitle">
-          <span>Release date: movie().release_date</span>
+          <span>Release date: {{ movie().release_date }}</span>
+          <span>Budget: $ {{ movie().budget }}</span>
+          <span>Duration: {{ movie().duration }} min</span>
         </small>
       </div>
       <button>Details</button>
