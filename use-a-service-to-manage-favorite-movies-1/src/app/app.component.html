@@ -1,0 +1,10 @@
+<div class="container">
+  @for(movie of movies(); track movie.id) {
+  <app-movie-item
+    (onFavourite)="isFavorite($event, movie)"
+    [movie]="movie"
+    [isFavourite]="favouritesIds.includes(movie.id)"
+    appHighlight
+  />
+  }
+</div>
